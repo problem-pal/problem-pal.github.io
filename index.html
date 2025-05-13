@@ -1,16 +1,190 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProblemPal – Snap • Solve • Succeed</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clr-bg: #0d0d0d;
+      --clr-surface: #171717;
+      --clr-primary: #7c3aed;
+      --clr-text: #f3f3f3;
+      --clr-muted: #9a9a9a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--clr-primary); text-decoration: none; }
+
+    .container { width: 90%; max-width: 1080px; margin-inline: auto; }
+    header { padding: 1.25rem 0; }
+    .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -0.5px; }
+    .btn {
+      display: inline-block;
+      background: var(--clr-primary);
+      color: var(--clr-text);
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-3px); }
+
+    section { padding: 4rem 0; }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 1rem; }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; margin-bottom: 2rem; }
+    p { color: var(--clr-muted); margin-bottom: 1rem; }
+
+    /* Hero */
+    .hero { text-align: center; }
+    .hero p { max-width: 600px; margin-inline: auto; margin-bottom: 2rem; }
+
+    /* Features */
+    .features-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .feature-card {
+      background: var(--clr-surface);
+      padding: 2rem 1.5rem;
+      border-radius: 0.75rem;
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover { transform: translateY(-6px); }
+    .feature-card h3 { color: var(--clr-primary); font-size: 1.25rem; margin-bottom: 0.5rem; }
+
+    /* How It Works */
+    .steps { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 3rem; }
+    .step { text-align: center; }
+    .step span {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      background: var(--clr-primary);
+      color: var(--clr-text);
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* FAQ */
+    details { background: var(--clr-surface); margin-bottom: 1rem; padding: 1rem 1.25rem; border-radius: 0.5rem; }
+    summary { cursor: pointer; font-weight: 600; }
+
+    /* Footer */
+    footer { background: var(--clr-surface); text-align: center; padding: 2rem 0 1rem; margin-top: 3rem; }
+  </style>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <header>
+    <div class="container nav-wrapper">
+      <div class="logo">ProblemPal</div>
+      <a href="https://apps.apple.com/us/app/problempal/id6711330327" class="btn" target="_blank" rel="noopener">Download App</a>
+    </div>
+  </header>
 
+  <!-- Hero -->
+  <section class="hero container" id="top">
+    <h1>Homework help in a single snap.</h1>
+    <p>Capture any question—from algebra to Spanish—and get fool-proof answers + study tools in <strong>3&nbsp;seconds</strong>, powered by <strong>GPT-4.1-mini.</p>
+    <a href="https://apps.apple.com/us/app/problempal/id6711330327" class="btn" target="_blank" rel="noopener">Get ProblemPal Free</a>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <h2>Your pocket-sized study arsenal</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Snap &amp; Solve</h3>
+          <p>Take a photo and ProblemPal serves an instant, accurate answer.</p>
+        </div>
+        <div class="feature-card">
+          <h3>AI Chat Tutor</h3>
+          <p>Ask follow-up questions in natural language for deeper understanding.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Focus Timer</h3>
+          <p>Built-in Pomodoro timer keeps you on task and tracks your study minutes.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Pro Study Tips</h3>
+          <p>Unlock bite-sized, expert-backed tips curated for every subject.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" style="background: var(--clr-surface);">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <p>Open ProblemPal &amp; frame your question.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <p>AI instantly pulls the problem &amp; solves it.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <p>Dive deeper with AI Chat or start a study timer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Is ProblemPal free?</summary>
+        <p>Yes—download and start solving problems at no cost. Unlimited scans + Pro Study Tips unlock with a <strong>$19.99&nbsp;/year</strong> subscription (7-day free trial). Plus: <strong>10 free daily scans</strong> coming soon.</p>
+      </details>
+      <details>
+        <summary>Do you store my photos?</summary>
+        <p>No. Images are processed securely in-memory and never saved to our servers or your gallery.</p>
+      </details>
+      <details>
+        <summary>Which devices are supported?</summary>
+        <p>ProblemPal is optimized for iPhone running iOS&nbsp;15 or later.</p>
+      </details>
+      <details>
+        <summary>How do I contact support?</summary>
+        <p>Email us anytime at <a href="mailto:team@problempal.com">team@problempal.com</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> ProblemPal, Inc.</p>
+      <p><a href="mailto:team@problempal.com">team@problempal.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
