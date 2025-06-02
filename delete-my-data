@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ProblemPal - Data Deletion Instructions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #2e6ef7;
+    }
+  </style>
+</head>
+<body>
+  <h1>Data Deletion Request</h1>
+  <p>
+    If you would like to delete your data associated with the ProblemPal app, please email us at:
+  </p>
+  <p>
+    <strong>team@problempal.app</strong>
+  </p>
+  <p>
+    In your message, include the email or account information you used within the app so we can verify and process your request promptly.
+  </p>
+  <p>
+    Thank you for using ProblemPal.
+  </p>
+</body>
+</html>
